@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        TextView questionTextView = findViewById(R.id.question);
-        TextView answerTextView = findViewById(R.id.answer);
+        TextView questionTextView = findViewById(R.id.flashcard_question);
+        TextView answerTextView = findViewById(R.id.flashcard_answer);
 
         questionTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         answerTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                questionTextView.setVisibility(View.INVISIBLE);
-                answerTextView.setVisibility(View.VISIBLE);
+                questionTextView.setVisibility(View.VISIBLE);
+                answerTextView.setVisibility(View.INVISIBLE);
 
             }
         });
