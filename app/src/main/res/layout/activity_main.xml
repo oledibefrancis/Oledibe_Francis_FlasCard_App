@@ -23,7 +23,7 @@
         android:textSize="40sp"
         android:text="2008"
         android:gravity="center"
-        android:Visibility="invisible"
+        android:visibility="invisible"
         tools:visibility="visible"
         />
 </RelativeLayout>

@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView questionTextView = findViewById(R.id.question);
-        TextView answerTextView = findViewById(R.id.question);
+        TextView answerTextView = findViewById(R.id.answer);
 
         questionTextView.setOnClickListener(new View.OnClickListener() {
             @Override
