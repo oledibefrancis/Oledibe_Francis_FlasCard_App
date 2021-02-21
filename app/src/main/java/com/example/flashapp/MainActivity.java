@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         TextView questionTextView = findViewById(R.id.question);
         TextView answerTextView = findViewById(R.id.answer);
 

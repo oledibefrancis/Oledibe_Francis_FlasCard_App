@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:textSize="40sp"
-        android:text="when was the first version of android released"
+        android:text="Who is the 44th president of the United States?"
         android:gravity="center"
         android:textAlignment="center"/>
 
@@ -21,9 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:textSize="40sp"
-        android:text="2008"
+        android:text="Barrack Obama"
         android:gravity="center"
         android:visibility="invisible"
-        tools:visibility="visible"
         />
 </RelativeLayout>
