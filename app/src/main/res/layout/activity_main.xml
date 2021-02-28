@@ -27,7 +27,7 @@
         android:text="Barrack Obama"
         android:gravity="center"
         android:visibility="invisible"
-        android:background="@drawable/card_background"
+        android:background="@drawable/card_answer_background"
 
         />
 </RelativeLayout>
