@@ -27,7 +27,46 @@
         android:text="Barrack Obama"
         android:gravity="center"
         android:visibility="invisible"
-        android:background="@drawable/card_answer_background"
+        android:background="@drawable/card_answer_background" />
 
-        />
+    <TextView
+        android:id="@+id/answer_1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textSize="40sp"
+        android:text="Barrack Obama"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:background="@drawable/card_answer_background" />
+    <TextView
+        android:id="@+id/answer_2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textSize="40sp"
+        android:text="Donald Trump"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:background="@drawable/card_answer_background" />
+    <TextView
+        android:id="@+id/answer_3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textSize="40sp"
+        android:text="Joe Biden"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:background="@drawable/card_answer_background" />
+
+     <ImageView
+         android:id="@+id/myBtn"
+         android:src="@drawable/ic_navigating_icon"
+         android:layout_width="match_parent"
+         android:layout_marginTop="650dp"
+         android:layout_marginLeft="300dp"
+         android:layout_height="50dp"
+
+         />
+
+
+
 </RelativeLayout>
