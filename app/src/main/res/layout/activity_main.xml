@@ -32,40 +32,78 @@
     <TextView
         android:id="@+id/answer_1"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:textSize="40sp"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
         android:text="Barrack Obama"
+        android:layout_below="@+id/flashcard_question"
+        android:layout_marginTop="25dp"
         android:gravity="center"
-        android:visibility="invisible"
-        android:background="@drawable/card_answer_background" />
+        android:background="@color/brown"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+       />
     <TextView
         android:id="@+id/answer_2"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:textSize="40sp"
-        android:text="Donald Trump"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Joe Biden"
+        android:layout_below="@+id/flashcard_question"
+        android:layout_marginTop="100dp"
         android:gravity="center"
-        android:visibility="invisible"
-        android:background="@drawable/card_answer_background" />
+        android:background="@color/brown"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        />
     <TextView
         android:id="@+id/answer_3"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:textSize="40sp"
-        android:text="Joe Biden"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Barrack Obama"
+        android:layout_below="@+id/flashcard_question"
+        android:layout_marginTop="175dp"
         android:gravity="center"
-        android:visibility="invisible"
-        android:background="@drawable/card_answer_background" />
+        android:background="@color/brown"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        />
+
 
      <ImageView
-         android:id="@+id/myBtn"
+         android:id="@+id/plus_Btn"
          android:src="@drawable/ic_navigating_icon"
          android:layout_width="match_parent"
          android:layout_marginTop="650dp"
          android:layout_marginLeft="300dp"
          android:layout_height="50dp"
-
          />
+
+    <ImageView
+        android:id="@+id/open_eye"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="650dp"
+        android:src="@drawable/ic_open_eye"
+        android:layout_centerHorizontal="true"/>
+
+
+    <ImageView
+        android:id="@+id/close_eye"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="650dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_closed_eye" />
+
+    <ImageView
+        android:id="@+id/next_card"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="450dp"
+        android:layout_alignRight="@id/flashcard_question"
+        android:src="@drawable/ic_next_card" />
+
 
 
 
