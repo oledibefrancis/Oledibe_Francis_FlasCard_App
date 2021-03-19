@@ -20,7 +20,8 @@ public class AddCardActivity extends AppCompatActivity {
         ImageView SaveButton =findViewById(R.id.my_save_icon);
         EditText editQuestion = findViewById(R.id.editQuestionField);
         EditText editAnswer = findViewById(R.id.editAnswerField);
-
+        String s1 = getIntent().getStringExtra("string1_key");
+        editQuestion.setText(s1);
 
 
 
@@ -35,8 +36,8 @@ public class AddCardActivity extends AppCompatActivity {
         SaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String question = editQuestion.getText().toString();
-                String answer = editAnswer.getText().toString();
+                String question =((EditText)findViewById(R.id.editQuestionField)).getText().toString();
+                String answer =((EditText)findViewById(R.id.editAnswerField)).getText().toString();
 
                 Intent data =new Intent();     // create a new Intent, this is where we will put our data
                 data.putExtra("string1", question);  // puts one string into the Intent, with the key as 'string1'
