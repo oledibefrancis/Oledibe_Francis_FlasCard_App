@@ -73,10 +73,11 @@
      <ImageView
          android:id="@+id/plus_Btn"
          android:src="@drawable/ic_navigating_icon"
-         android:layout_width="match_parent"
+         android:layout_width="50dp"
          android:layout_marginTop="650dp"
          android:layout_marginLeft="300dp"
          android:layout_height="50dp"
+         android:layout_alignRight="@id/flashcard_question"
          />
 
     <ImageView
