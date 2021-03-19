@@ -6,14 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".AddCardActivity">
 
-    <ImageView
-        android:id="@+id/my_cancle_Btn"
-        android:src="@drawable/ic_cancle_icon"
-        android:layout_width="match_parent"
-        android:layout_marginTop="650dp"
-        android:layout_marginLeft="300dp"
-        android:layout_height="50dp"
-        />
+
 
     <EditText
         android:id="@+id/editQuestionField"
@@ -31,6 +24,50 @@
         android:layout_margin="20dp"
         android:hint="Enter answer here!"
         android:inputType="textMultiLine" />
+
+
+    <EditText
+        android:id="@+id/editOption1"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editAnswerField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Enter Option 2 here"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/editOption2"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editOption1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Option 3 here"
+        android:inputType="textMultiLine"
+        android:layout_marginBottom="20dp"/>
+
+
+    <EditText
+        android:id="@+id/editOption3"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editOption2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Enter Option 1 here"
+        android:inputType="textMultiLine" />
+
+    <ImageView
+        android:id="@+id/my_cancle_Btn"
+        android:src="@drawable/ic_cancle_icon"
+        android:layout_width="match_parent"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="300dp"
+        android:layout_height="50dp"
+        />
 
     <ImageView
         android:id="@+id/my_save_icon"
