@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         ImageView Addcard = findViewById(R.id.plus_Btn);
         ImageView OpenEye = findViewById(R.id.open_eye);
         ImageView CloseEye = findViewById(R.id.close_eye);
+        ImageView EditButton =findViewById(R.id.edit_button);
         ImageView NextCard = findViewById(R.id.next_card);
+        ImageView DeleteButton =findViewById(R.id.delete_button);
         TextView answer1 = findViewById(R.id.answer_1);
         TextView answer2 = findViewById(R.id.answer_2);
         TextView answer3 = findViewById(R.id.answer_3);
@@ -104,7 +106,35 @@ public class MainActivity extends AppCompatActivity {
                 answer3.setVisibility(View.INVISIBLE);
             }
         });
-            //This statement sets an onclick listner for the next card button
+
+        //The statement belwo sets an on clikc listener for the edit button
+        EditButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
+                MainActivity.this.startActivityForResult(intent, 100);
+                intent.putExtra("string1_key",((TextView) findViewById(R.id.flashcard_question)).getText().toString());
+                intent.putExtra("string2_key",((TextView) findViewById(R.id.flashcard_answer)).getText().toString());
+                intent.putExtra("string3_key",((TextView) findViewById(R.id.answer_1)).getText().toString());
+                intent.putExtra("string4_key",((TextView) findViewById(R.id.answer_2)).getText().toString());
+                intent.putExtra("string1_key",((TextView) findViewById(R.id.answer_3)).getText().toString());
+            }
+        });
+
+
+        //The statement below sets an on click listener for the plus button
+        Addcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
+                MainActivity.this.startActivityForResult(intent, 100);
+            }
+        });
+
+
+
+
+        //This statement sets an onclick listner for the next card button
         NextCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,27 +156,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-//The statement below sets an on click listener for the plus button
-        Addcard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
-                MainActivity.this.startActivityForResult(intent, 100);
-            }
-        });
-
-
-
         flashcardDatabase = new FlashcardDatabase(getApplicationContext()); //initializing the flashcard variable
         allFlashcards = flashcardDatabase.getAllCards();// variable initialization, we can access all flash cards
 
         if (allFlashcards != null && allFlashcards.size() > 0) {
             ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(0).getQuestion());
             ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(0).getAnswer()); }
+
+
+        //This statement sets an onClick listener for the delete button
+        DeleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flashcardDatabase.deleteCard(((TextView) findViewById(R.id.flashcard_question)).getText().toString());
+            }
+        });
+
+
+        allFlashcards = flashcardDatabase.getAllCards();//This line updates the list of cards after a flashcard was deleted from the database
+
+
+
+
         }
 
+        //End of OnCreate
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
