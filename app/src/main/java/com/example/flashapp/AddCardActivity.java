@@ -1,5 +1,6 @@
 package com.example.flashapp;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -23,10 +24,6 @@ public class AddCardActivity extends AppCompatActivity {
 
         //This statement is to get the data that MainActivity passed
 
-        String s1 = getIntent().getStringExtra("string1_key");
-        String s2 = getIntent().getStringExtra("string2_Key");
-        ((EditText)findViewById(R.id.editQuestionField)).setText(s1);
-        ((EditText)findViewById(R.id.editQuestionField)).setText(s2);
 
 
         CancleButton.setOnClickListener(new View.OnClickListener() {
@@ -56,5 +53,32 @@ public class AddCardActivity extends AppCompatActivity {
                 finish();    // closes this activity and pass data to the original activity that launched this activity
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+//        data.getStringExtra("string1_key");
+//        data.getStringExtra("string2_key");
+//        data.getStringExtra("string3_key");
+//        data.getStringExtra("string4_key");
+//        data.getStringExtra("string5_key");
+
+        String s1 =  data.getStringExtra("string1_key");
+        String s2 = data.getStringExtra("string2_key");
+        String s3 = data.getStringExtra("string3_key");
+        String s4 = data.getStringExtra("string4_key");
+        String s5 =  data.getStringExtra("string5_key");
+
+        ((EditText)findViewById(R.id.editAnswerField)).setText(s1);
+        ((EditText)findViewById(R.id.editQuestionField)).setText(s2);
+        ((EditText)findViewById(R.id.editOption1)).setText(s3);
+        ((EditText)findViewById(R.id.editOption2)).setText(s4);
+        ((EditText)findViewById(R.id.editOption3)).setText(s5);
+
+
+
+
+
     }
 }
