@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         TextView questionTextView = findViewById(R.id.flashcard_question);
         TextView answerTextView = findViewById(R.id.flashcard_answer);
         ImageView Addcard = findViewById(R.id.plus_Btn);
-        ImageView OpenEye = findViewById(R.id.close_eye);
-        ImageView CloseEye = findViewById(R.id.open_eye);
+        ImageView OpenEye = findViewById(R.id.open_eye);
+        ImageView CloseEye = findViewById(R.id.close_eye);
         ImageView EditButton =findViewById(R.id.edit_button);
         ImageView NextCard = findViewById(R.id.next_card);
         ImageView DeleteButton =findViewById(R.id.delete_button);
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("string2_key",((TextView) findViewById(R.id.flashcard_answer)).getText().toString());
                 intent.putExtra("string3_key",((TextView) findViewById(R.id.answer_1)).getText().toString());
                 intent.putExtra("string4_key",((TextView) findViewById(R.id.answer_2)).getText().toString());
-                intent.putExtra("string1_key",((TextView) findViewById(R.id.answer_3)).getText().toString());
+                intent.putExtra("string5_key",((TextView) findViewById(R.id.answer_3)).getText().toString());
                 MainActivity.this.startActivityForResult(intent, 100);
             }
         });
