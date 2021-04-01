@@ -60,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30sp"
-        android:text="Barrack Obama"
+        android:text="Donald Trump"
         android:layout_below="@+id/flashcard_question"
         android:layout_marginTop="175dp"
         android:gravity="center"
@@ -68,6 +68,17 @@
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
         />
+
+<!--    <TextView-->
+<!--        android:id="@+id/timer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:textSize="40sp"-->
+<!--        android:gravity="center"-->
+<!--        android:textAlignment="center"-->
+<!--        android:background="@drawable/card_background"-->
+<!--        android:elevation="5dp"-->
+<!--        />-->
 
 
      <ImageView
@@ -121,6 +132,8 @@
         android:layout_marginTop="550dp"
         android:layout_alignRight="@id/flashcard_question"
         android:src="@drawable/ic_delete_button" />
+
+
 
 
 </RelativeLayout>
