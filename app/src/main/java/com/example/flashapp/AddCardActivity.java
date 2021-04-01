@@ -23,6 +23,17 @@ public class AddCardActivity extends AppCompatActivity {
         EditText editAnswer = findViewById(R.id.editAnswerField);
 
         //This statement is to get the data that MainActivity passed
+        String s1 = getIntent().getStringExtra("string1_key");
+        String s2 = getIntent().getStringExtra("string2_key");
+        String s3 = getIntent().getStringExtra("string3_key");
+        String s4 = getIntent().getStringExtra("string4_key");
+        String s5 = getIntent().getStringExtra("string5_key");
+
+        ((EditText)findViewById(R.id.editQuestionField)).setText(s1);
+        ((EditText)findViewById(R.id.editAnswerField)).setText(s2);
+        ((EditText)findViewById(R.id.editOption1)).setText(s3);
+        ((EditText)findViewById(R.id.editOption2)).setText(s4);
+        ((EditText)findViewById(R.id.editOption3)).setText(s5);
 
 
 
@@ -30,7 +41,9 @@ public class AddCardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+                overridePendingTransition(R.anim.right2_in, R.anim.left2_out);
             }
+
         });
 
 //on click listener for the save button
@@ -51,34 +64,24 @@ public class AddCardActivity extends AppCompatActivity {
              //   data.putExtra("string5", option3);
                 setResult(RESULT_OK,data);  // set result code and bundle data for response
                 finish();    // closes this activity and pass data to the original activity that launched this activity
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-//        data.getStringExtra("string1_key");
-//        data.getStringExtra("string2_key");
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+////        data.getStringExtra("string1_key");
+////        data.getStringExtra("string2_key");
 //        data.getStringExtra("string3_key");
 //        data.getStringExtra("string4_key");
 //        data.getStringExtra("string5_key");
 
-        String s1 =  data.getStringExtra("string1_key");
-        String s2 = data.getStringExtra("string2_key");
-        String s3 = data.getStringExtra("string3_key");
-        String s4 = data.getStringExtra("string4_key");
-        String s5 =  data.getStringExtra("string5_key");
-
-        ((EditText)findViewById(R.id.editAnswerField)).setText(s1);
-        ((EditText)findViewById(R.id.editQuestionField)).setText(s2);
-        ((EditText)findViewById(R.id.editOption1)).setText(s3);
-        ((EditText)findViewById(R.id.editOption2)).setText(s4);
-        ((EditText)findViewById(R.id.editOption3)).setText(s5);
 
 
 
 
-
-    }
+//
+//    }
 }
