@@ -38,7 +38,7 @@
         android:layout_below="@+id/flashcard_question"
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:background="@color/brown"
+        android:background="@color/green"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
        />
@@ -51,7 +51,7 @@
         android:layout_below="@+id/flashcard_question"
         android:layout_marginTop="100dp"
         android:gravity="center"
-        android:background="@color/brown"
+        android:background="@color/green"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
         />
@@ -64,7 +64,7 @@
         android:layout_below="@+id/flashcard_question"
         android:layout_marginTop="175dp"
         android:gravity="center"
-        android:background="@color/brown"
+        android:background="@color/green"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
         />
