@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                answer1.setBackgroundColor(getResources().getColor(R.color.green, null));
+                answer1.setBackgroundColor(getResources().getColor(R.color.ligth_green, null));
                 new ParticleSystem(MainActivity.this, 100, R.drawable.confetti, 3000)
                         .setSpeedRange(0.2f, 0.6f)
                         .oneShot(findViewById(R.id.answer_1), 100);
@@ -139,9 +139,9 @@ public class MainActivity extends AppCompatActivity {
                 answer1.setVisibility(View.VISIBLE);
                 answer2.setVisibility(View.VISIBLE);
                 answer3.setVisibility(View.VISIBLE);
-                answer1.setBackgroundColor(getResources().getColor(R.color.brown, null));
-                answer2.setBackgroundColor(getResources().getColor(R.color.brown, null));
-                answer3.setBackgroundColor(getResources().getColor(R.color.brown, null));
+                answer1.setBackgroundColor(getResources().getColor(R.color.green, null));
+                answer2.setBackgroundColor(getResources().getColor(R.color.green, null));
+                answer3.setBackgroundColor(getResources().getColor(R.color.green, null));
             }
         });
 
@@ -169,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("string4_key",((TextView) findViewById(R.id.answer_2)).getText().toString());
                 intent.putExtra("string5_key",((TextView) findViewById(R.id.answer_3)).getText().toString());
                 MainActivity.this.startActivityForResult(intent, 100);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });
 
