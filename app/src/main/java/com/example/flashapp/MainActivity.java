@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 View answerSideView = findViewById(R.id.flashcard_answer);
                 View questionSideView = findViewById(R.id.flashcard_answer);
 
-
                 // get the center for the clipping circle
                 int cx = answerSideView.getWidth() / 2;
                 int cy = answerSideView.getHeight() / 2;
